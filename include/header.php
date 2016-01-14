@@ -15,7 +15,6 @@
     </head>
     <body>
         <div id="site" class="row">
-            <!-- =================== HEADER =================== -->
             <div class="large-12 columns" style="padding-top:40px;padding-bottom: 20px">
                 <img src="img/nbastoreee.jpg" alt="NBA STORE"/>
             </div>

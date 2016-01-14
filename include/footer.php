@@ -3,7 +3,6 @@
 <div class="large-12 columns">
     <div id="container-spacer"></div>
 </div>
-<!-- =================== FOOTER  =================== -->
 <div class="large-12 columns">
     <div id="footer-reference" class="row">
         <div class="medium-8 column">
@@ -55,7 +54,7 @@
     </div>   
     <a class="close-reveal-modal">&#215;</a>
 </div>             
-<!-- script foundation -->
+<!-- script pour le login -->
 <script src="include/js/vendor/jquery.js"></script>
 <script src="include/js/foundation.min.js"></script>
 <script>
