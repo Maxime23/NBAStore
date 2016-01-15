@@ -18,15 +18,15 @@
             <div class="large-12 columns" style="padding-top:40px;padding-bottom: 20px">
                 <img src="img/nbastoreee.jpg" alt="NBA STORE"/>
             </div>
-            <!-- =================== MENU  =================== -->
+            <!-- Menu commence ici sinon rien de spécial dans cette classe simplement du boostrap et du html avec un peu de php pour recup les données -->
             <div class="large-12 columns">
                 <table id="menu" class="table-clear w-max" style="" cellspacing="0">
                     <tr>
                         <td class="header-border-menu" onclick="location.href = 'index.php?module=accueil'"><span class="fa fa-home"></span> Accueil</td>
                         <td class="header-border-menu" onclick="location.href = 'index.php?module=equipe'">Equipes</td>
                         <td class="header-border-menu" onclick="location.href = 'index.php?module=shoes'">Chaussures</td>
-                        <td class="header-border-menu" onclick="location.href = 'index.php?module=player'">Joueurs</td
-                        <td class="header-border-menu-spacer"><!-- spacer --></td>
+                        <td class="header-border-menu" onclick="location.href = 'index.php?module=player'">Joueurs</td>
+                        <td class="header-border-menu-spacer"></td>
                          <td class="header-border-menu" onclick="location.href = 'index.php?module=contact'"> Contact</td>
                         <?php
                         if (isset($_SESSION["id_user"])) {
@@ -55,7 +55,7 @@
                     </tr>
                 </table>
             </div>
-            
+            <!-- petite barre que l'on appelle breadcrumbs dans le jargon pour afficher que le site est en cours de création -->
             <div class="large-12 columns">
                 <div id="alerteSVP">
                     <span class="fa fa-bell-o" style="font-size: 1.5em;"></span>
