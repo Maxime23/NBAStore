@@ -37,9 +37,6 @@
                                     <div class="profil-menu" onclick="location.href = 'index.php?module=membre&action=profil_users&id=<?php echo $_SESSION["login"] ?>'">
                                         <i class="fa fa-user"></i> Profil
                                     </div>
-                                    <div class="profil-menu" onclick="location.href = 'index.php?module=membre&action=update'">
-                                        <i class="fa fa-refresh"></i> Mise a jour du profil
-                                    </div>
                                     <div class="profil-menu-logout" onclick="location.href = 'index.php?action=logout'">
                                         <i class="fa fa-sign-out" style="color:#C0392B;"></i> Deconnexion
                                     </div>

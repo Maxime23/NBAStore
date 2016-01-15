@@ -58,7 +58,8 @@ if ($_POST) {
         <?php } ?>
         
         <?php if ($login == 1) { 
-        //Si c'est bon alors on va afficher la suite ?>
+        //Si c'est bon alors on va afficher la suite
+        //petit effet qu'il faut un temps de recherche dans la bd . vive boostrap c'est trop bien ?>
             <div data-alert class="alert-box success">
                 <i class="fa fa-circle-o-notch fa-spin"></i> Connexion en cours ...
                 <a href="#" class="close">&times;</a>
