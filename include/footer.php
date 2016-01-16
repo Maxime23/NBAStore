@@ -3,7 +3,7 @@
 <div class="large-12 columns">
     <div id="container-spacer"></div>
 </div>
-<!-- =================== FOOTER  =================== -->
+<!-- debut footer, rien de special, classe normale -->
 <div class="large-12 columns">
     <div id="footer-reference" class="row">
         <div class="medium-8 column">

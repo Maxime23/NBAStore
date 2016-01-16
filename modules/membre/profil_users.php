@@ -33,10 +33,10 @@ if (!isset($_GET["id"]) || empty($_GET["id"])) {
 ?>
             </div>
             <div class="medium-9 columns">
-                <div class="profil-bio-header">
+                <div class="profil-header">
                     Informations du compte
                 </div>
-                <div class="profil-bio-content">
+                <div class="profil-content">
                     <div class="row">
                         <div class="medium-6 columns">
                             <table class="table-clear w-max table-profil-bio">
