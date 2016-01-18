@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8" />
@@ -25,9 +26,9 @@
                         <td class="header-border-menu" onclick="location.href = 'index.php?module=accueil'"><span class="fa fa-home"></span> Accueil</td>
                         <td class="header-border-menu" onclick="location.href = 'index.php?module=equipe'">Equipes</td>
                         <td class="header-border-menu" onclick="location.href = 'index.php?module=shoes'">Chaussures</td>
-                        <td class="header-border-menu" onclick="location.href = 'index.php?module=player'">Joueurs</td>
                         <td class="header-border-menu-spacer"></td>
-                         <td class="header-border-menu" onclick="location.href = 'index.php?module=contact'"> Contact</td>
+                        <td class="header-border-menu" onclick="location.href = 'index.php?module=contact'"> Contact</td>
+                        <td class="header-border-menu" onclick="location.href = 'index.php?module=commande'"><span class="fa fa-shopping-cart"></span> Commandes</td>
                         <?php
                         if (isset($_SESSION["id_user"])) {
                             ?>
@@ -36,6 +37,9 @@
                                 <div id="header-login-menu">
                                     <div class="profil-menu" onclick="location.href = 'index.php?module=membre&action=profil_users&id=<?php echo $_SESSION["login"] ?>'">
                                         <i class="fa fa-user"></i> Profil
+                                    </div>
+                                    <div class="profil-menu" onclick="location.href = 'index.php?module=membre&action=modif'">
+                                        <i class="fa fa-refresh"></i> Mise à jour du profil
                                     </div>
                                     <div class="profil-menu-logout" onclick="location.href = 'index.php?action=logout'">
                                         <i class="fa fa-sign-out" style="color:#C0392B;"></i> Deconnexion

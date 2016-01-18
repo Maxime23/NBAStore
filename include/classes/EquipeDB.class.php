@@ -70,7 +70,7 @@ class EquipeDB extends equipe {
         public function compteEquipe() {
         $total = 0;
         try {
-            $queryCount = "select count(0) as total from users;";
+            $queryCount = "select count(0) as total from equipe;";
             $resultset = $this->_db->prepare($queryCount);
             $resultset->execute();
         } catch (PDOException $e) {
@@ -86,15 +86,16 @@ class EquipeDB extends equipe {
         $array = array();
         $i = 0;
         try {
-            $query = "select nom_equipe, equipe_avatar from equipe order by id_equipe;";
+            $query = "select id_equipe, nom_equipe, equipe_avatar from equipe order by id_equipe;";
 
-            //$query = "select * from users order by login asc LIMIT " . $xParPage . " OFFSET " . $xDebut . "";
+   
             $resultset = $this->_db->prepare($query);
             $resultset->execute();
         } catch (PDOException $e) {
             print "Echec de la requete " . $e->getMessage();
         }
         while ($data = $resultset->fetch()) {
+            $array[$i]["id_equipe"] = $data["id_equipe"];
             $array[$i]["nom_equipe"] = utf8_encode($data["nom_equipe"]);
             $array[$i]["equipe_avatar"] = $data["equipe_avatar"];
             $i++;

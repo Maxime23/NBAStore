@@ -53,7 +53,7 @@ class UsersDB extends Users {
     public function update() {
         $ok = false;
         try {
-            $query = "UPDATE users SET nom = '" . $this->get_nom() . "', prenom = '" . $this->get_prenom() . "', adresse = '" . $this->get_adresse() . "', email = '" . $this->get_email() . "'"  . " WHERE id_users = " . $this->get_id_users();
+            $query = "UPDATE users SET nom = '" . $this->get_nom() . "', prenom = '" . $this->get_prenom() . "', adresse = '" . $this->get_adresse() .  "'" . " WHERE id_users = " . $this->get_id_users();
             $resultset = $this->_db->prepare($query);
             $resultset->execute();
             $ok = true;
@@ -62,20 +62,21 @@ class UsersDB extends Users {
         }
         return $ok;
     }
-// trouver un user sur son mail
-    public function getUserMail($var_email) {
+    
+    //changer le mdp
+    public function setPassword($var1, $var2) {
+        $ok = false;
         try {
-            $query = "select * from users where email = '" . addslashes($var_email) . "';";
+            $query = "UPDATE users SET mdp = '" . $var2 . "' WHERE id_users = " . $var1 . ";";
             $resultset = $this->_db->prepare($query);
             $resultset->execute();
+            $ok = true;
         } catch (PDOException $e) {
             print "Echec de la requete " . $e->getMessage();
         }
-        while ($data = $resultset->fetch()) {
-            $this->_id_users = $data["id_users"];
-            $this->_email = $data["email"];
-        }
+        return $ok;
     }
+    
   // trouver un user sur son login  
         public function getUsersByLogin($var_login) {
         try {

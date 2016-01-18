@@ -44,7 +44,7 @@ if (!isset($_GET["id"]) || empty($_GET["id"])) {
                         </div>
                         </div>
                     </div>
-                <a class="btn-panier" href ="index.php?module=equipe&action=addpanier&id=<?php echo $ProduitToGet->get_id_prod(); ?>"><span class="fa fa-shopping-cart"></span> Ajouter au panier</button></a>
+                <a class="btn-panier" href ="index.php?module=commande&action=addcommande&id=<?php echo $ProduitToGet->get_id_prod(); ?>"><span class="fa fa-shopping-cart"></span> Commander !</button></a>
                 </div>
             </div>
         <?php

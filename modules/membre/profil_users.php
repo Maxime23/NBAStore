@@ -11,8 +11,12 @@ if (!isset($_GET["id"]) || empty($_GET["id"])) {
     if ($usersToGet->get_id_users() == -1) {
         $_SESSION["id_erreur"] = 500;
         $_SESSION["erreur_message"] = "Aucun utilisateur avec l'identifiant <i class=\"fa fa-angle-double-left\"></i> " . $_GET["id"] . " <i class=\"fa fa-angle-double-right\"></i> n'a pu être trouvé.";
+        //$_SESSION["id_users"] = get_id_users();
         include("modules/erreur/init.php");
     } else {
+        var_dump($_SESSION["id_user"]);
+        //$_SESSION["id_user"] = get_id_users();
+        //$_SESSION["id_users"] = get_id_users();
         //si pas on affiche ismplement ses coordonnées
         ?>
         <div class="row" id="profil">
@@ -39,7 +43,7 @@ if (!isset($_GET["id"]) || empty($_GET["id"])) {
                 <div class="profil-content">
                     <div class="row">
                         <div class="medium-6 columns">
-                            <table class="table-clear w-max table-profil-bio">
+                            <table class="table-clear w-max table-profil">
                                 <tr>
                                     <td style="width: 30%;"><b>Nom</b></td>
                                     <td>: <?php echo $usersToGet->get_nom(); ?></td>
@@ -55,7 +59,7 @@ if (!isset($_GET["id"]) || empty($_GET["id"])) {
                             </table>
                         </div>
                         <div class="medium-6 columns">
-                            <table class="table-clear w-max table-profil-bio">
+                            <table class="table-clear w-max table-profil">
                                 <tr>
                                     <td style="width: 30%;"><b>E-mail</b></td>
                                     <td>: <?php echo $usersToGet->get_email(); ?></td>

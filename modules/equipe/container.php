@@ -1,4 +1,5 @@
 <?php
+
 $tmp = new EquipeDB($db);
 $compteEquipe = $tmp->compteEquipe();
 $b = 0;

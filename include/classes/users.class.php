@@ -20,12 +20,11 @@ class Users {
 
     }
 
-    public function setEdit($_id_users, $_nom, $_prenom, $_adresse, $_email) {
+    public function setEdit($_id_users, $_nom, $_prenom, $_adresse) {
         $this->_id_users = $_id_users;
         $this->_nom = $_nom;
         $this->_prenom = $_prenom;
         $this->_adresse = $_adresse;
-        $this->_email = $_email;
     }
 
     public function toString() {

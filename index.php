@@ -1,8 +1,7 @@
 <?php
-//Lancement de la session
 session_start();
 $_SESSION["id_erreur"] = "";
-//Si on clique sur deconnecter, on se deconnecte en faisant session_destroy
+
 if (isset($_GET["action"])) {
     if ($_GET["action"] == "logout") {
         session_destroy();
@@ -10,18 +9,15 @@ if (isset($_GET["action"])) {
         exit;
     }
 }
-//ces  include sont necessaire des le lancement du projet
+
 require 'include/db_connexion.php';
 require 'include/classes/connexion.php';
 include("include/autoload.php");
-//On recup la connex
 $db = Connexion::getInstance($dsn, $user, $pass);
 include('include/header.php');
-//on genere l'erreur 40000 si on a pas pu se co a la bd ( numéro d'erreur trouver sur un site pour les associer )
 if ($_SESSION["id_erreur"] == 40000) {
     include("modules/erreur/init.php");
 } else {
-    //on charge
     if (!isset($_GET['module']) || empty($_GET['module'])) {
         $_GET['module'] = "accueil";
     }
@@ -37,4 +33,5 @@ if ($_SESSION["id_erreur"] == 40000) {
 }
 
 include('include/footer.php');
+
 ?>

@@ -1,4 +1,9 @@
 <?php
+if (!isset($_GET["id"]) || empty($_GET["id"])) {
+    $_SESSION["id_erreur"] = 404;
+    $_SESSION["erreur_message"] = "La page que vous avez demandée n’a pas été trouvée.<br />Il se peut que le lien que vous avez utilisé soit rompu ou que vous ayez tapé l’adresse (URL) incorrectement.";
+    include("modules/erreur/init.php");
+} else {
 $tmp = new produitDB($db);
 $compteProduits = $tmp->compteProduits($_GET["id"]);
 $b = 0;
@@ -46,5 +51,6 @@ if ($compteProduits > 0) {
         
     </div>
     <?php
+}
 }
 ?>

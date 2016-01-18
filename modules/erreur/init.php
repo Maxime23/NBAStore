@@ -1,4 +1,3 @@
-<!--Lorsqu'il y a une erreur on va recuperer son code, on va afficher un message et on va afficher une image -->
 <div class="row" id="erreur-container">
         <img src="img/mcgee.jpg" alt="WAT"/><br />
 

@@ -6,8 +6,13 @@ $inscription = false;
 $erreurTab = array();
 //On check si post est bien existant pour etre sur qu'on soit bien en etat de créer
     if ($_POST) {
-    $userToRegister = new UsersDB($db);
-
+    $usersToRegister = new UsersDB($db);
+    $usersToRegister->getUsersByLogin($_POST["login"]);
+    if ($usersToRegister->get_id_users() != -1) {
+        $erreur++;
+        $erreurTab[$erreur] = "Ce login est déjà utilisé.";
+    }
+        
     if ($erreur == 0) {
     //Si il y a pas d'erreur et que tout les champs sont rempli on les envoi a la bd avec la methode setAll qui est dans users.class.php et on met la variable $inscrpiton a true
         if (empty($_POST["nom"])) {
@@ -30,9 +35,9 @@ $erreurTab = array();
         }
         
     }
-        $user = new UsersDB($db);
-        $user->setAll($_POST["nom"], $_POST["prenom"], $_POST["adresse"], $_POST["pass1"], $_POST["email"], $_POST["login"]);
-        $user->createUsers();
+        $users = new UsersDB($db);
+        $users->setAll($_POST["nom"], $_POST["prenom"], $_POST["adresse"], $_POST["pass1"], $_POST["email"], $_POST["login"]);
+        $users->createUsers();
         $inscription = true;
     }
     }
@@ -43,7 +48,7 @@ if ($inscription) {
         <div class="medium-12">
             <center><h3>Inscription</h3></center>
             <!-- On le renvoi au formulaire de connexion -->
-            Votre compte est maintenant prêt, vous pouvez vous connecter <a href="index.php?module=login&action=connexion">ici</a>.<br />
+            Votre compte est maintenant prêt, vous pouvez vous connecter <a href="index.php?module=acces&action=connexion">ici</a>.<br />
         </div>
     </div>
     <?php
@@ -64,11 +69,11 @@ if ($inscription) {
                 <a href="#" class="close">&times;</a>
             </div>
         <?php } ?>
-        <div id="target-compte" class="profil-bio-header">
+        <div id="target-compte" class="profil-header">
             Compte
         </div>
-        <form action="index.php?module=login&action=inscription" method="post">
-            <div class="profil-bio-content">        
+        <form action="index.php?module=acces&action=inscription" method="post">
+            <div class="profil-content">        
                 <div class="row" style="margin-top:20px;">
                     <div id="alert-compte-imcomplet" data-alert class="alert-box alert" style="display: none;">
                         Tout les champs doivent être remplis !
@@ -128,10 +133,10 @@ if ($inscription) {
                     </div>
                 </div>
             </div>
-            <div class="profil-bio-header">
+            <div class="profil-header">
                 Inscription
             </div>
-            <div class="profil-bio-content">        
+            <div class="profil-content">        
                 <div class="row" style="margin-top:20px;">
                     <div class="medium-8 columns" style="margin-left:20%;">
                         <div class="row">
@@ -144,7 +149,7 @@ if ($inscription) {
                     </div>
                     <div class="row">
                         <div class="small-12 columns text-center">
-                            <input type="submit" class="button profil-moderation-btn" style="margin-top: 10px;margin-bottom: 0px;" value="S'inscrire maitenant"/>
+                            <input type="submit" class="button btn-send" style="margin-top: 10px;margin-bottom: 0px;" value="S'inscrire maitenant"/>
                         </div>
                     </div>
                 </div>

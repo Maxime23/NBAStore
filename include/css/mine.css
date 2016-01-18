@@ -1,0 +1,395 @@
+/*
+ General
+===============================================================
+*/
+body{
+  background-image: url(../../img/banniere.jpg);;
+}
+#site{
+    max-width: 1210px;
+    margin: 0 auto;
+}
+/*
+scrollbar
+===============================================================
+*/
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+/*
+Header + Menu
+===============================================================
+*/
+
+#header{
+    width: 100%;
+    margin-top:40px;
+}
+
+.btn-color{
+    background-color: #333333;
+}
+.w-max{
+    width: 100%;
+}
+.table-clear{
+    background: none;
+    border: none;
+    margin : 0px;
+    padding : 0px;
+}
+.table-clear td{
+    margin : 0px;
+    padding : 0px;
+}
+.header-border-menu{
+    background-color: #333333;
+    border-bottom: 5px solid #333333;
+    width:10%;
+    height: 60px;
+    font-size: 18px;
+    color: #fff;
+    transition: background-color 300ms ease-out;
+    text-align: center;
+    cursor: pointer;
+}
+.header-border-menu-spacer{
+    background-color: #333333;
+    border-bottom: 5px solid #333333;
+    width:20%;
+}
+.header-border-menu:hover{
+    border-bottom: 5px solid #000000;
+    background-color: #000000;
+}
+
+#header-login div{
+    text-align: left;
+}
+#header-login-menu{
+    display: none;
+    position: absolute;
+    top:60px;
+    right: 15px;
+    z-index: 1;
+}
+
+#header-login-menu div{
+    background-color: #000000;
+    color:white;
+    margin:0;
+    width: 220px;
+}
+#header-login-menu div:hover{
+    background-color: #000000;
+}
+#header-login-menu i{
+    color:white;
+}
+#alerteSVP{
+    height: 45px;
+    background-color: #ebebeb;
+    padding-top: 12px;
+    padding-left: 20px;
+    color: #d3d3d3;
+    font-size:12px;
+}
+#alerteSVP a{
+    font-size:15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/*
+Container
+===============================================================
+*/
+#container{
+    margin-left:0px;
+    margin-right: 0px;
+    background-color: #f5f5f5;
+}
+#container-left{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+#container-right{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+#container-center{
+    padding-top:20px;
+    padding-bottom:15px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+#container-spacer{
+    margin-left:0px;
+    margin-right: 0px;
+    background-color: #333333;
+    height: 5px;
+}
+
+
+/*
+footer
+===============================================================
+*/
+#footer-menu{
+    margin-left:0px;
+    margin-right: 0px;
+    background-color: #333333;
+    height: 220px;
+    color:#f5f5f5;
+}
+#footer-menu div{
+    padding:30px;
+    padding-bottom:0px;
+}
+#footer-menu h4{
+    color: #fff;
+}
+#footer-menu li{
+    font-size:14px;
+}
+#footer-menu a{
+    color:#f5f5f5;
+}
+#footer-menu span{
+    color:#7497b8;
+    padding-right: 10px;
+}
+#footer-reference{
+    margin-left:0px;
+    margin-right: 0px;
+    padding-top:12px;
+    background-color: #333333;
+    height: 75px;
+    margin-bottom: 40px;
+    color:#f5f5f5;
+}
+#redirection{
+    text-align:right;
+    font-size: 32px;
+}
+#redirection span{
+    color: #fff;
+    transition: color 300ms ease-out;
+}
+#redirection span:hover{
+    color: red;
+    cursor: pointer;
+}
+/*
+LOGIN
+===============================================================
+*/
+.padding-box {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+
+.left-solid {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.signup-panel {
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #fff;
+}
+
+.signup-panel a{
+    color: #fff;
+}
+
+.signup-panel i {
+    font-size: 30px;
+    line-height: 50px;
+    color: #999;
+}
+.signup-panel form input, .signup-panel form span {
+    height: 50px;
+}
+.signup-panel .welcome {
+    font-size: 26px;
+    text-align: center;
+    margin-left: 0;
+}
+.signup-panel p {
+    font-size: 13px;
+    font-weight: 200;
+    text-align: center;
+}
+.signup-panel .button {
+    margin-left: 35%;
+}
+
+.nouveauvis {
+    background: #fff;
+}
+/*
+erreur
+===============================================================
+
+*/
+#erreur-container{
+    margin-left:0px;
+    margin-right: 0px;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#equipe{
+    margin-left:0px;
+    margin-right: 0px;
+    background-color: #fff;
+    padding:15px;
+    padding-top:20px;
+}
+
+.btn-panier {
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  background: #57b827;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 650px;
+}
+
+.btn-send{
+    background-color: #333333;
+    color: #fff;
+    transition: background-color 300ms ease-out;
+}
+
+.btn-send:hover{
+    background-color: #000000;
+}
+
+/*
+list equipe
+================================
+*/
+
+.list-equipe{
+    width: 100%;
+    margin-bottom:20px;
+    margin-top: 15px;
+}
+.list-equipe .list-equipe-header{
+    background-color: #243d54;
+    height: 50px;
+    color: #7497b8;
+}
+.list-equipe td{
+    padding-left:20px;
+    height: 60px;
+    border-bottom:1pt solid #ebebeb;
+}
+.list-equipe .list-equipe-header a{
+    color:#f5f5f5;
+}
+.list-equipe tr:nth-of-type(even){
+    background-color: #fff;
+}
+.list-equipe tr{
+    background-color: #fff;
+}
+.list-membres-options {
+    color: #243d54;
+    transition: color 300ms ease-out;
+}
+.list-membres-options:hover{
+    color: #f01f4b;
+    cursor: pointer;
+}
+/*
+profil
+===============================================================
+*/
+#profil{
+    margin-left:0px;
+    margin-right: 0px;
+    background-color: #f5f5f5;
+    padding:15px;
+    padding-top:20px;
+}
+#profil-avatar{
+    padding-top:30px;
+    padding-bottom:30px;
+    background-color: #fff;
+}
+.profil-menu{
+    margin-top:2px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    border-left: 3px #ededed solid;
+    background-color: #ededed;
+    transition: border-left 300ms ease-out, background-color 300ms ease-out, padding-left 300ms ease-out;
+}
+.profil-menu:hover{
+    padding-left:20px;
+    background-color: #dadada;
+    border-left: 3px #243d54 solid;
+    cursor: pointer;
+}
+
+.profil-menu-logout{
+    margin-top:2px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    border-left: 3px #ededed solid;
+    background-color: #ededed;
+    transition: border-left 300ms ease-out, background-color 300ms ease-out, padding-left 300ms ease-out;
+}
+.profil-menu-logout:hover{
+    padding-left:20px;
+    background-color: #dadada;
+    border-left: 3px #C0392B solid;
+    cursor: pointer;
+}
+.profil-header{
+    padding:10px;
+    padding-left:30px;
+    padding-right:30px;
+    background-color: #333333;
+    color:#ffffff;
+}
+.profil-content{
+    padding: 30px;
+    padding-top: 5px;
+    background-color: #ededed;
+    margin-bottom:20px;
+}
+
+.table-profil td{
+    padding-left:20px;
+    height: 30px;
+    border-bottom:1pt solid #ebebeb;
+}
+

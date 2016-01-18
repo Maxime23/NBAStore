@@ -6,7 +6,10 @@ if (isset($_GET["action"])) {
         }
        else if ($_GET["action"] == "details") {
             include('details.php');
-        }                else {
+        }
+    else if ($_GET["action"] == "addpanier") {
+            include ('addpanier.php');
+    }else {
                 include('container.php');
                 }
     } else {

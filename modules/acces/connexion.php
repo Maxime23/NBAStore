@@ -58,8 +58,7 @@ if ($_POST) {
         <?php } ?>
         
         <?php if ($login == 1) { 
-        //Si c'est bon alors on va afficher la suite
-        //petit effet qu'il faut un temps de recherche dans la bd . vive boostrap c'est trop bien ?>
+        //Si c'est bon alors on va afficher la suite ?>
             <div data-alert class="alert-box success">
                 <i class="fa fa-circle-o-notch fa-spin"></i> Connexion en cours ...
                 <a href="#" class="close">&times;</a>
@@ -94,14 +93,14 @@ if ($_POST) {
 
                                 <center>
                                     <span class="button btn-send" style="margin-left:0;" value="" >Se connecter</span>
-                                    <span class="button btn-back" style="margin-left:0;" value="" >Annuler</span>
+                                    <span class="button btn-send" style="margin-left:0;" value="" >Annuler</span>
                                 </center>
                                 <?php
                             } else {
                                 ?>
                                 <center>
                                     <input type="submit" class="button btn-send" style="margin-left:0;" value="Se connecter" />
-                                    <input type="reset" class="button btn-back" style="margin-left:0;" value="Annuler" />
+                                    <input type="reset" class="button btn-send" style="margin-left:0;" value="Annuler" />
                                 </center>
                                 <?php
                             }
@@ -110,8 +109,8 @@ if ($_POST) {
 
                     </form>
                     <ul class="disc">
-                        <li><a href="index.php?module=login&action=inscription" style="color:#008CBA;">Mot de passe oublié ?</a></li>
-                        <li><a href="index.php?module=login&action=inscription" style="color:#008CBA;">Créer un compte maintenant !</a></li>
+                        <li><a href="index.php?module=acces&action=inscription" style="color:#008CBA;">Mot de passe oublié ?</a></li>
+                        <li><a href="index.php?module=acces&action=inscription" style="color:#008CBA;">Créer un compte maintenant !</a></li>
                     </ul>
                 </div>
             </div>
